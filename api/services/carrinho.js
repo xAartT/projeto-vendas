@@ -21,7 +21,7 @@ module.exports = {
         );
     },
 
-        removerAction: async (produtoId, userId) => {
+    removerAction: async (produtoId, userId) => {
         const carrinho = await pool.query(
             'SELECT id FROM carrinho WHERE usuario_id = $1',
             [userId]
@@ -35,7 +35,7 @@ module.exports = {
         );
     },
 
-        finalizarAction: async (userId) => {
+    finalizarAction: async (userId) => {
         const client = await pool.connect();
 
         try {
