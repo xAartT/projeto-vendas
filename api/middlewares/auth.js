@@ -1,4 +1,3 @@
-// middlewares/auth.js
 const { verifyAccess } = require('../utils/jwt');
 const pool = require('../db/pool');
 
